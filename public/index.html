@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Food Recipe Henry</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      html,
+      body {
+        overflow-x: hidden;
+      }
+
+      #hero {
+        position: relative;
+      }
+
+      #hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image: url(img/Anime-Food-Compilation.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        z-index: -1;
+        filter: brightness(0.75);
+      }
+
+      .main-container {
+        overflow-y: scroll;
+        scrollbar-width: none;
+        overflow-x: hidden;
+        -ms-overflow-style: none;
+      }
+
+      .overflow-y-scroll-hidden {
+        overflow-y: scroll;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+      }
+
+      body::-webkit-scrollbar {
+        display: none;
+      }
+    </style>
+  </head>
+  <body class="font-workSans body flex justify-center items-center">
+    <section class="main-section overflow-x-hidden">
+      <!-- Hero section -->
+      <section class="px-5 h-3/4-screen flex w-screen items-center justify-center flex-col" id="hero">
+        <h1 class="mt-20 mb-8 phones:text-5xl md:text-6xl text-white tracking-wider font-semibold">Search <span class="text-emerald-400">Recipe</span></h1>
+
+        <form action="" class="bg-white rounded-3xl flex p-2 transform -translate-x-1 w-5/12" id="form">
+          <img src="img/search (1).svg" alt="" class="w-5 h-auto" />
+          <input type="text" class="bg-transparent outline-none text-base text-gray-900 text-center w-full px-5" placeholder="Search recipes" id="search-bar" />
+        </form>
+      </section>
+
+      <!-- Main -->
+      <section class="py-20 px-20">
+        <h1 class="border-b-4 border-emerald-400 w-fit font-semibold text-5xl tracking-wide text-gray-900 mb-10 mx-auto" id="title">POPULAR</h1>
+
+        <div class="flex flex-col h-3/4-screen w-fit mx-auto pl-10 pr-5 pb-5 main-container" id="mainContainer">
+          <section class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 w-3/4-screen mx-auto" id="grid"></section>
+        </div>
+      </section>
+    </section>
+
+    <!-- Footer -->
+    <script src="js/script.js"></script>
+  </body>
+</html>
